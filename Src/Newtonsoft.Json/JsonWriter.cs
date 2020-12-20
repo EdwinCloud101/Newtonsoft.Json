@@ -1565,6 +1565,15 @@ namespace Newtonsoft.Json
                         return;
 
                     case PrimitiveTypeCode.SingleNullable:
+
+                        //@Edwin
+                        int income = 85;
+                        Action<int> action = (p) =>
+                        {
+                            int total = income * 2;
+                        };
+
+
                         writer.WriteValue((value == null) ? (float?)null : (float)value);
                         return;
 
